@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="845.0" prefWidth="1554.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GD_QLKhachHang_Controller">
+   <children>
+      <Pane layoutX="260.0" layoutY="70.0" prefHeight="775.0" prefWidth="1294.0">
+         <children>
+            <Label layoutX="65.0" layoutY="20.0" text="Khách hàng">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Line endX="1194.0" layoutX="100.0" layoutY="60.0" startX="-100.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" width="1294.0" />
+            <Text fill="WHITE" layoutX="503.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khách hàng" textAlignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tableNhanVien" layoutX="358.0" layoutY="110.0" prefHeight="606.0" prefWidth="936.0">
+               <columns>
+                  <TableColumn fx:id="clSTT" prefWidth="100.0" text="STT" />
+                  <TableColumn fx:id="clMaKH" prefWidth="150.0" text="Mã khách hàng" />
+                  <TableColumn fx:id="clTenKh" prefWidth="150.0" text="Tên khách hàng" />
+                  <TableColumn fx:id="clSDT" prefWidth="150.0" text="Số điện thoại" />
+                  <TableColumn fx:id="clNgaySinh" prefWidth="132.800048828125" text="Ngày sinh" />
+                  <TableColumn fx:id="clDiem" prefWidth="112.800048828125" text="Tích điểm" />
+                  <TableColumn fx:id="clCCCD" prefWidth="139.199951171875" text="CCCD" />
+               </columns>
+            </TableView>
+            <Label layoutX="10.0" layoutY="120.0" text="Chi tiết thông tin khách hàng:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="165.0" text="Mã khách hàng: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_MaNV" layoutX="168.0" layoutY="165.0" text="NVYYMMDDXX">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="215.0" text="Tên khách hàng: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="265.0" text="Số điện thoại: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="315.0" text="Ngày sinh: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="365.0" text="Tích điểm:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_diem" layoutX="167.0" layoutY="365.0" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="415.0" text="CCCD:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/travel.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtTenKH" layoutX="168.0" layoutY="215.0" prefHeight="32.0" prefWidth="183.0" promptText="Tên khách hàng" />
+            <TextField fx:id="txtSDT" layoutX="168.0" layoutY="264.0" prefHeight="32.0" prefWidth="183.0" promptText="Số điện thoại" />
+            <DatePicker fx:id="txtNgaySinh" layoutX="168.0" layoutY="313.0" prefHeight="30.0" prefWidth="183.0" promptText="Ngày sinh" />
+            <TextField fx:id="txtCCCD" layoutX="168.0" layoutY="413.0" prefHeight="32.0" prefWidth="183.0" promptText="CCCD" />
+            <Button fx:id="btnSua" contentDisplay="RIGHT" layoutX="141.0" layoutY="473.0" mnemonicParsing="false" onMouseClicked="#suaTTNV" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: #edbf6d;" text="     Sửa" textAlignment="RIGHT" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="146.0" layoutY="479.0" onMouseClicked="#suaTTNV" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/writing-square.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnThem" contentDisplay="RIGHT" layoutX="245.0" layoutY="473.0" mnemonicParsing="false" onMouseClicked="#themNV" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: #00bf63;" text="     Thêm" textAlignment="RIGHT" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="242.0" layoutY="468.0" onMouseClicked="#themNV" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/plus-sign.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnTimKiem" contentDisplay="RIGHT" layoutX="87.0" layoutY="537.0" mnemonicParsing="false" onMouseClicked="#moGiaoDienTimKiemKH" prefHeight="40.0" prefWidth="198.0" style="-fx-background-color: #2972d3;" text="      Tìm kiếm khách hàng" textAlignment="RIGHT" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="95.0" layoutY="542.0" onMouseClicked="#moGiaoDienTimKiem" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/search3png.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnXoaTrang" contentDisplay="RIGHT" layoutX="38.0" layoutY="473.0" mnemonicParsing="false" onMouseClicked="#xoaTrang" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: gray;" text="Xoá trắng" textAlignment="RIGHT" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutY="70.0" prefHeight="775.0" prefWidth="260.0" style="-fx-background-color: #D9D9D9;">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="15.0" onMouseClicked="#moGiaoDienThuePhong" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/apartment-building.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="60.0" layoutY="20.0" onMouseClicked="#moGiaoDienThuePhong" text="Quản lý thuê phòng">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="75.0" onMouseClicked="#moGiaoDienQuanLy" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/list.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="60.0" layoutY="80.0" onMouseClicked="#moGiaoDienQuanLy" text="Quản lý">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="125.0" onMouseClicked="#moGiaoDienPhong" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/apartment-building.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="130.0" onMouseClicked="#moGiaoDienPhong" text="Phòng">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="165.0" onMouseClicked="#moGiaoDienQLNV" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/employees.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="170.0" onMouseClicked="#moGiaoDienQLNV" text="Nhân viên">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="205.0" onMouseClicked="#moGiaoDienKhachHang" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/travel.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="210.0" onMouseClicked="#moGiaoDienKhachHang" text="Khách hàng">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="245.0" onMouseClicked="#moGiaoDienHoaDon" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/clipboard.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="250.0" onMouseClicked="#moGiaoDienHoaDon" text="Hóa đơn">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="285.0" onMouseClicked="#moGiaoDienDichVu" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/shopping-bag.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="290.0" onMouseClicked="#moGiaoDienDichVu" text="Dịch vụ">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="325.0" onMouseClicked="#moGiaoDienTaiKhoan" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/account-accepted.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="330.0" onMouseClicked="#moGiaoDienTaiKhoan" text="Tài khoản">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="365.0" onMouseClicked="#moGiaoDienUuDai" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/discount-label.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="370.0" onMouseClicked="#moGiaoDienUuDai" text="Ưu đãi">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="460.0" onMouseClicked="#moGiaoDienThongKe" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/pie-chart.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="60.0" layoutY="465.0" onMouseClicked="#moGiaoDienThongKe" text="Thống kê">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="250.0" layoutY="205.0" stroke="WHITE" strokeType="INSIDE" width="10.0" />
+            <ImageView fx:id="icon_TimKiem" fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="410.0" onMouseClicked="#moGiaoDienTimKiem" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/search.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lb_TimKiem" layoutX="60.0" layoutY="415.0" onMouseClicked="#moGiaoDienTimKiem" text="Tìm kiếm">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="70.0" prefWidth="1554.0" style="-fx-background-color: #004AAD;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/SUMI.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="19.0" text="SUMI HOTEL" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="1490.0" layoutY="15.0" onMouseClicked="#dongUngDung" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/turn-off%20(1).png" />
+               </image>
+            </ImageView>
+            <Circle fill="WHITE" layoutX="1433.0" layoutY="36.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fx:id="avt" fitHeight="40.0" fitWidth="40.0" layoutX="1413.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/user.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="maNV" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1195.0" layoutY="10.0" prefWidth="200.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="tenNV" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1145.0" layoutY="35.0" prefWidth="250.0" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

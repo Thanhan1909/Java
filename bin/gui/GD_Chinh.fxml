@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="845.0" prefWidth="1554.0" style="-fx-background-color: #AFCDF5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GD_Chinh_Controller">
+   <children>
+      <Pane fx:id="pn_NoiDung" layoutY="70.0" prefHeight="775.0" prefWidth="1554.0">
+         <children>
+            <Pane prefHeight="775.0" prefWidth="260.0" style="-fx-background-color: #D9D9D9;">
+               <children>
+                  <ImageView fx:id="icon_ThuePhong" fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="15.0" onMouseClicked="#moGiaoDienThuePhong" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pic/apartment-building.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lb_ThuePhong" layoutX="60.0" layoutY="20.0" onMouseClicked="#moGiaoDienThuePhong" text="Quản lý thuê phòng">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="icon_QuanLy" fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="80.0" onMouseClicked="#moGiaoDienQuanLy" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pic/list.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lb_QuanLy" layoutX="60.0" layoutY="85.0" onMouseClicked="#moGiaoDienQuanLy" text="Quản lý">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="icon_ThongKe" fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="210.0" onMouseClicked="#moGiaoDienThongKe" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pic/pie-chart.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lb_ThongKe" layoutX="60.0" layoutY="215.0" onMouseClicked="#moGiaoDienThongKe" text="Thống kê">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="icon_TimKiem" fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="145.0" onMouseClicked="#moGiaoDienTimKiem" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pic/search.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lb_TimKiem" layoutX="60.0" layoutY="150.0" onMouseClicked="#moGiaoDienTimKiem" text="Tìm kiếm">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="260.0" prefHeight="775.0" prefWidth="1294.0">
+               <children>
+                  <ImageView fitHeight="500.0" fitWidth="500.0" layoutX="379.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pic/hotel.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane prefHeight="70.0" prefWidth="1554.0" style="-fx-background-color: #004AAD;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/SUMI.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="19.0" text="SUMI HOTEL" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="1490.0" layoutY="15.0" onMouseClicked="#dongUngDung" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/turn-off%20(1).png" />
+               </image>
+            </ImageView>
+            <Circle fill="WHITE" layoutX="1433.0" layoutY="36.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fx:id="avt" fitHeight="40.0" fitWidth="40.0" layoutX="1413.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/user.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="maNV" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1195.0" layoutY="10.0" prefWidth="200.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="tenNV" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1145.0" layoutY="35.0" prefWidth="250.0" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

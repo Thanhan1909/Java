@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="336.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SplashController">
+   <children>
+      <ProgressBar layoutX="1.0" layoutY="366.0" prefHeight="10.0" prefWidth="522.0" />
+      <Label fx:id="lblLoading" layoutX="14.0" layoutY="344.0" text="loading..." />
+      <ImageView fitHeight="365.0" fitWidth="522.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pic/a1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

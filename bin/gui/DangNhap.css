@@ -1,0 +1,10 @@
+
+.logo {
+	-fx-background-image:url('../pic/logoxanh.png');
+	-fx-background-size:cover;
+}
+.timKiem {
+	-fx-background-image:url('../pic/search.png');
+	-fx-background-size:cover;
+	
+}

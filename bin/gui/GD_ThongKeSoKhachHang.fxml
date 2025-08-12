@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="845.0" prefWidth="1554.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GD_ThongKeSoKhachHang_Controller">
+   <children>
+      <Pane layoutY="70.0" prefHeight="775.0" prefWidth="260.0" style="-fx-background-color: #D9D9D9;">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="15.0" onMouseClicked="#moGDQLTP" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/apartment-building.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="60.0" layoutY="20.0" onMouseClicked="#moGDQLTP" text="Quản lý thuê phòng">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="75.0" onMouseClicked="#moGDQL" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/list.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="60.0" layoutY="80.0" onMouseClicked="#moGDQL" text="Quản lý">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="195.0" onMouseClicked="#moGDTKe" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/pie-chart.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="60.0" layoutY="200.0" onMouseClicked="#moGDTKe" text="Thống kê">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="245.0" onMouseClicked="#moGDTKDT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/money-transfer.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="250.0" onMouseClicked="#moGDTKDT" text="Doanh thu">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="285.0" onMouseClicked="#moGDTKKH" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/travel.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="290.0" onMouseClicked="#moGDTKKH" text="Khách hàng">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="icon_TimKiem" fitHeight="40.0" fitWidth="40.0" layoutX="15.0" layoutY="135.0" onMouseClicked="#moGDTK" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/search.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lb_TimKiem" layoutX="60.0" layoutY="140.0" onMouseClicked="#moGDTK" text="Tìm kiếm">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="250.0" layoutY="285.0" stroke="WHITE" strokeType="INSIDE" width="10.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="260.0" layoutY="70.0" prefHeight="775.0" prefWidth="1294.0">
+         <children>
+            <Label layoutX="476.0" layoutY="14.0" text="THỐNG KÊ KHÁCH HÀNG">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Line endX="1294.0" layoutY="55.0" />
+            <Label fx:id="chon" layoutX="15.0" layoutY="75.0" text="Loại thống kê: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_01" layoutX="675.0" layoutY="100.0" text="Tổng số khách hàng: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_TongSoKhach" layoutX="990.0" layoutY="100.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_02" layoutX="675.0" layoutY="135.0" text="Trung bình số khách: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_TBSoKhach" layoutX="990.0" layoutY="135.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <BarChart fx:id="chart_DTTN" layoutX="20.0" layoutY="270.0" prefHeight="450.0" prefWidth="1254.0" title="Thống kê doanh thu theo ngày">
+               <xAxis>
+                  <CategoryAxis label="Ngày" side="BOTTOM" fx:id="x" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="y" label="Tổng sô khách hàng" side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <ComboBox fx:id="cbbLoai" layoutX="180.0" layoutY="75.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: gray;" />
+            <Label fx:id="lb_KHSS" layoutX="675.0" layoutY="170.0" text="Số khách hàng so với kỳ trước:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_soKhachSoSanh" layoutX="990.0" layoutY="170.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="chon2" layoutX="15.0" layoutY="185.0" text="Chọn tháng: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbbThang" layoutX="180.0" layoutY="186.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: gray;" />
+            <Label fx:id="chon21" layoutX="15.0" layoutY="220.0" text="Chọn năm: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbbNam" layoutX="180.0" layoutY="220.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: gray;" />
+            <Label fx:id="chon11" layoutX="15.0" layoutY="115.0" text="Chọn ngày bắt đầu: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datePickerNgaybd" layoutX="180.0" layoutY="115.0" prefWidth="200.0" style="-fx-border-color: gray;" />
+            <Label fx:id="chon111" layoutX="15.0" layoutY="150.0" text="Chọn ngày kết thúc: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datePickerNgaykt" layoutX="180.0" layoutY="150.0" prefWidth="200.0" style="-fx-border-color: gray;" />
+            <Button fx:id="btnThongKe" layoutX="433.0" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#thongKe" prefHeight="75.0" prefWidth="150.0" style="-fx-background-color: #004AAD;" text="Thống kê" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Label fx:id="note" layoutX="15.0" layoutY="260.0" prefHeight="17.0" prefWidth="365.0" textFill="RED" />
+         </children>
+      </Pane>
+      <Pane prefHeight="70.0" prefWidth="1554.0" style="-fx-background-color: #004AAD;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/SUMI.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="19.0" text="SUMI HOTEL" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="1490.0" layoutY="15.0" onMouseClicked="#dongUngDung" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/turn-off%20(1).png" />
+               </image>
+            </ImageView>
+            <Circle fill="WHITE" layoutX="1433.0" layoutY="36.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fx:id="avt" fitHeight="40.0" fitWidth="40.0" layoutX="1413.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pic/user.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="maNV" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1195.0" layoutY="10.0" prefWidth="200.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="tenNV" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1145.0" layoutY="35.0" prefWidth="250.0" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="GD_ThanhToan" cache="true" prefHeight="706.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GD_ThanhToanController">
+    <children>
+        <Text fill="#cc0000" layoutX="484.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HÓA ĐƠN THANH TOÁN">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Text>
+        <Line endX="1080.0" endY="-40.0" layoutX="191.0" layoutY="110.0" startX="-198.00001525878906" startY="-40.0" strokeWidth="2.0" />
+        <TitledPane collapsible="false" layoutX="-7.0" layoutY="79.0" prefHeight="253.0" prefWidth="708.0" text="Phòng">
+            <content>
+                <TableView fx:id="tablePhong" prefHeight="253.0" prefWidth="708.0">
+                    <columns>
+                        <TableColumn fx:id="maPhongCol" prefWidth="112.79998170137424" text="Mã" />
+                        <TableColumn fx:id="loaiPhongCol" prefWidth="123.20001220703125" text="Loại phòng" />
+                        <TableColumn fx:id="gioVaoCol" prefWidth="160.8000030517578" text="Ngày nhận" />
+                        <TableColumn fx:id="gioRaCol" prefWidth="151.20004272460938" text="Ngày trả phòng" />
+                        <TableColumn fx:id="donGiaCol" prefWidth="164.0" text="Đơn giá" />
+                    </columns>
+                </TableView>
+            </content>
+        </TitledPane>
+        <TitledPane collapsible="false" layoutX="-7.0" layoutY="349.0" prefHeight="350.0" prefWidth="454.0" text="Dịch vụ">
+            <content>
+                <TableView fx:id="tableDichVu" prefHeight="298.0" prefWidth="706.0">
+                    <columns>
+                        <TableColumn fx:id="tenDichVuCol" prefWidth="151.9999939084055" resizable="false" text="Tên dịch vụ" />
+                        <TableColumn fx:id="soLuongCol" prefWidth="130.40000915527344" resizable="false" text="Số lượng" />
+                        <TableColumn fx:id="thanhTienDVCol" minWidth="0.0" prefWidth="169.60003662109375" resizable="false" text="Thành tiền" />
+                    </columns>
+                </TableView>
+            </content>
+        </TitledPane>
+        <TitledPane collapsible="false" layoutX="723.0" layoutY="79.0" prefHeight="620.0" prefWidth="550.0" text="Hóa đơn">
+            <content>
+                <Pane prefHeight="555.0" prefWidth="548.0">
+                    <children>
+                        <Label layoutX="215.0" layoutY="7.0" prefHeight="37.0" prefWidth="142.0" style="-fx-font-size: 24;" text="TỔNG TIỀN">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="55.0" style="-fx-font-size: 16;" text="Mã Hóa đơn:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Text fx:id="txtMaHoaDon" layoutX="150.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" wrappingWidth="220.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                        <Label layoutX="12.0" layoutY="90.0" style="-fx-font-size: 16;" text="Nhân viên lập:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Text fx:id="txtNhanVien" layoutX="150.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" wrappingWidth="220.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                        <Label layoutX="12.0" layoutY="125.0" style="-fx-font-size: 16;" text="Khách hàng:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Text fx:id="txtKhachHang" layoutX="150.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" wrappingWidth="220.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                        <Label layoutX="12.0" layoutY="160.0" style="-fx-font-size: 16;" text="Ngày lập:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Text fx:id="txtNgayLap" layoutX="150.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" wrappingWidth="220.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                        <Label layoutX="12.0" layoutY="195.0" style="-fx-font-size: 16;" text="Tiền phòng:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Text fx:id="txtTienPhong" layoutX="150.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" wrappingWidth="220.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                        <Label layoutX="12.0" layoutY="235.0" style="-fx-font-size: 16;" text="Tiền dịch vụ:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Text fx:id="txtTienDichVu" layoutX="150.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" wrappingWidth="220.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                  <Label layoutX="12.0" layoutY="275.0" style="-fx-font-size: 16;" text="Tiền thuế">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                        <Label layoutX="12.0" layoutY="315.0" style="-fx-font-size: 16;" text="Tổng tiền:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="355.0" style="-fx-font-size: 16;" text="Mã khuyến mãi:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="395.0" style="-fx-font-size: 16;" text="Tiền đã giảm:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="460.0" style="-fx-font-size: 16;" text="Tiền nhận:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                  <Label layoutX="12.0" layoutY="500.0" style="-fx-font-size: 16;" text="Tiền thừa:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                        <Text fx:id="txtTongTien" layoutX="150.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" text="0 VNĐ" wrappingWidth="220.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                        <HBox alignment="CENTER" layoutX="150.0" layoutY="370.0" spacing="16.0">
+                            <children>
+                                <ImageView fx:id="imgCheckKM" fitHeight="18.0" fitWidth="22.0">
+                                    <image>
+                                        <Image url="@../image/check_false.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                  <Text fx:id="txtTienDaGiam" layoutX="150.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" text="0 VNĐ" wrappingWidth="220.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                          <TextField fx:id="txtTienNhan" layoutX="150.0" layoutY="455.0" onAction="#tinhTienThua" prefHeight="26.0" prefWidth="220.0" style="-fx-font-size: 16;" />
+                        <Text fx:id="txtTienThua" layoutX="150.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" text="0 VNĐ" wrappingWidth="220.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                        <CheckBox fx:id="checkBoxInHD" layoutX="251.0" layoutY="547.0" mnemonicParsing="false" onAction="#open" />
+                        <ImageView fx:id="imgIn" fitHeight="25.0" fitWidth="25.0" layoutX="278.0" layoutY="543.0" onMouseClicked="#inHD" preserveRatio="true">
+                            <image>
+                                <Image url="@../pic/print.png" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="btnThanhToan" disable="true" layoutX="324.0" layoutY="540.0" mnemonicParsing="false" onAction="#xacNhanThanhToan" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: LIGHTGREEN;" text="Xác nhận thanh toán" />
+                  <Text fx:id="txtTienThue" layoutX="150.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" text="0" wrappingWidth="220.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                          <TextField fx:id="txtMaKhuyenMai" layoutX="149.0" layoutY="350.0" onAction="#tinhTienKhuyenMai" prefHeight="26.0" prefWidth="220.0" style="-fx-font-size: 16;">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </TextField>
+                  <Label layoutX="12.0" layoutY="425.0" style="-fx-font-size: 16;" text="Tổng:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txtTong" layoutX="150.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16;" text="0 VNĐ" wrappingWidth="220.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                    </children>
+                </Pane>
+            </content>
+        </TitledPane>
+      <Label layoutX="453.0" layoutY="379.0" style="-fx-font-size: 16;" text="Mã dịch vụ: ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMaDichVu" layoutX="563.0" layoutY="369.0" prefHeight="30.0" prefWidth="130.0" style="-fx-font-size: 16;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="453.0" layoutY="429.0" style="-fx-font-size: 16;" text="Số lượng: ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_SoLuong" layoutX="563.0" layoutY="419.0" prefHeight="30.0" prefWidth="130.0" style="-fx-font-size: 16;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnThemDichVu" layoutX="563.0" layoutY="474.0" mnemonicParsing="false" onAction="#themDichVu" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: LIGHTGREEN;" text="Thêm dịch vụ" />
+      <Button fx:id="btnXoaDichVu" layoutX="459.0" layoutY="474.0" mnemonicParsing="false" onAction="#xoaDichVu" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #dc3535;" text="Xóa dịch vụ" textFill="WHITE" />
+    </children>
+</AnchorPane>
